@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="container_header" class="container">
+            <nav id="header-nav">
+                <img src="images/logo.png" class = "logo">
+                <ul id = "sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio Gallery</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa fa-times" aria-hidden="true" onclick ="closemenu()" ></i>
+                </ul>
+                <i class="fa fa-bars" aria-hidden="true"  onclick ="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>IT Undergraduate</p>
+                <h1>Hi, I am <span>Sandali</span> Liyanage <br> from Kandy, Sri Lanka</h1>
+            </div>
+        </div>
+    </div>
+<!--------about----------------->
+    <div id="about">
+        <div id="container_about" class="container">
+            
+        </div>
+    </div>
+
+
+<!--------------portfolio----------->
+<div id="portfolio">
+    <div class="container" id="container_portfolio">
+        
+    </div>
+</div>
+
+<!-----------projects---------->
+<div id="projects">
+    <div class="container" id="container_projects">
+        
+    </div>
+</div>
+
+<!-----------contact-->
+<div id="contact" class>
+    <div class="container" id="container_contact">
+        
+        
+    </div>
+    <div class="copyright">
+        <p>
+            Copyright &copy;  Made by <i class="fa fa-heart" aria-hidden="true"></i> H.L.S.S.Liyanage
+        </p>
+    </div>
+</div>
+<!-------------------------Java Script------------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+
+    </script>
+    
+</body>
+</html>
